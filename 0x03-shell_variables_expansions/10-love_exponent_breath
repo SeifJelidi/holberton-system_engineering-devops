@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((BREATH*LOVE*5+4))
+echo $((BREATH*LOVE*5+BREATH))
