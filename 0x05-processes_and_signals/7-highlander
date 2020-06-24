@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #displlay I am invincible!!! when receiving a SIGTERM signal
-"echo "I am invincible!!!""
+"echo I am invincible!!!" SIGTERM
 while true
 do
     echo "To infinity and beyond"
