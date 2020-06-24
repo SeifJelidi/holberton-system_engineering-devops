@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#using loop in bash to display something and sleep 2 betwwen the loop iteration
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
