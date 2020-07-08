@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #using until loop
 i=50
-until  [  $i -lt 40  ];
+until  [  $i -lt 41  ];
 do
 	echo "Holberton School"
 	let i-=1
