@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
+$i
 for i in `seq 1 10`;
 do
-echo "Holberton School"
-done  
+	echo "Holbertob School"
+done
