@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Bash script that change the /etc/hosts file. It changes1 localhost to 127.0.0.2 and facebook.com to 8.8.8.8
+cp /etc/hosts ~/hosts.copy
+echo "127.0.0.2 localhost" > ~/s_hosts
+echo "8.8.8.8   facebook.com" >> ~/s_hosts
+cp -f ~/s_hosts /etc/hosts
