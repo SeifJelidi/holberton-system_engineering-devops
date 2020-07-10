@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#using while loop in bash and cases
+i=0
+while [  $i -lt 20  ];
+do
+        let i=i+1
+case $i in
+	"4")
+		echo "4"
+		echo "bad luck from China"
+		
+		;;
+	"9")
+		echo "9"
+		echo "bad luck from Japan"
+		;;
+	"17")
+		echo "17"
+		echo "bad luck from Japan"
+		;;
+	*)
+		echo $i
+		;;
+esac
+done
