@@ -11,6 +11,6 @@ elif [ $i = 8 ]
 then
 	echo "good luck"
 else
-	echo "holberton school"
+	echo "Holberton school"
 fi
 done
