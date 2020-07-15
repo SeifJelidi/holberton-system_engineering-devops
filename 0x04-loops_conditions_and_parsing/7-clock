@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#using for loop in bash
+for i in {1..59}
+do
+	echo $i
+done
+echo "Hour: 1"
+for x in {1..9}
+do 
+	echo $x
+done
