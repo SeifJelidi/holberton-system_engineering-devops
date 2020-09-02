@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script bash that accepts one argument and passing different users
+sudo -u "$1" whoami
