@@ -18,9 +18,11 @@ if __name__ == "__main__":
     emp_name = user_json.get('name')
 
     filename = "{}.csv".format(id)
+    fieldnames = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
 
-    with open(filename, 'w', newline='') as file:
-        csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+    with open(filename, 'w', newline='') as csv_file:
+        csv_writer = csv.writer(csv_file, fieldnames=fieldnames,
+                                quoting=csv.QUOTE_ALL)
         for task in tasks_json:
             if int(id) == task.get('userId'):
                 csv_writer.writerow([int(id), emp_name, task.get('completed'),
