@@ -13,6 +13,7 @@ if __name__ == "__main__":
     tasks_url = 'https://jsonplaceholder.typicode.com/todos'
     num_done_tasks = 0
     total_num_tasks = 0
+
     user_json = requests.get(users_url.format(argv[1])).json()
     tasks_json = requests.get(tasks_url).json()
 
@@ -29,6 +30,5 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):".
           format(emp_name, num_done_tasks, total_num_tasks))
 
-    if (len(tasks_done) >= 1):
-        for task in tasks_done:
-            print("\t {}".format(task))
+    for task in tasks_done:
+        print("\t {}".format(task))
