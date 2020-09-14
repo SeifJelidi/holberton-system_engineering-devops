@@ -16,16 +16,12 @@ if __name__ == "__main__":
     tasks_json = requests.get(tasks_url).json()
 
     emp_name = user_json.get('name')
-    all_tasks = []
-
-    for task in tasks_json:
-        if int(id) == task.get('userId'):
-            all_tasks.append(task)
 
     filename = "{}.csv".format(id)
 
     with open(filename, 'w', newline='') as file:
         csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
-        for task in all_tasks:
-            csv_writer.writerow([int(id), emp_name, task.get('completed'),
-                                task.get('title')])
+        for task in tasks_json:
+            if int(id) == task.get('userId'):
+                csv_writer.writerow([int(id), emp_name, task.get('completed'),
+                                    task.get('title')])
