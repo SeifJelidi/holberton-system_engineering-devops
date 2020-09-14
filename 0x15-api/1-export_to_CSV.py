@@ -15,7 +15,7 @@ if __name__ == "__main__":
     user_json = requests.get(users_url).json()
     tasks_json = requests.get(tasks_url).json()
 
-    emp_name = user_json.get('name')
+    emp_name = user_json.get('username')
 
     task_list = []
     for task in tasks_json:
