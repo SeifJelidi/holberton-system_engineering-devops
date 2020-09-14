@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""  using this REST API, for a given employee ID, returns
-information about
- his/her TODO list progress"""
+""" Using what you did in the task #0, extend your
+Python script to export data in the CSV format"""
 
-
-import requests
 import csv
+import requests
 from sys import argv
 
 if __name__ == "__main__":
@@ -32,4 +30,4 @@ if __name__ == "__main__":
         csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in all_tasks:
             csv_writer.writerow([int(id), emp_name, task.get('completed'),
-                             task.get('title')])
+                                task.get('title')])
