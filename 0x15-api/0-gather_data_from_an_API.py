@@ -9,19 +9,20 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    users_url = 'https://jsonplaceholder.typicode.com/users/{}'
+    id = argv[1]
+    users_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
     tasks_url = 'https://jsonplaceholder.typicode.com/todos'
     num_done_tasks = 0
     total_num_tasks = 0
 
-    user_json = requests.get(users_url.format(argv[1])).json()
+    user_json = requests.get(users_url).json()
     tasks_json = requests.get(tasks_url).json()
 
     emp_name = user_json.get('name')
     tasks_done = []
 
     for task in tasks_json:
-        if int(argv[1]) == task.get('userId'):
+        if int(id) == task.get('userId'):
             total_num_tasks += 1
             if task.get('completed') is True:
                 num_done_tasks += 1
