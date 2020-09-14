@@ -11,8 +11,6 @@ if __name__ == "__main__":
     id = argv[1]
     users_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
     tasks_url = 'https://jsonplaceholder.typicode.com/todos'
-    num_done_tasks = 0
-    total_num_tasks = 0
 
     user_json = requests.get(users_url).json()
     tasks_json = requests.get(tasks_url).json()
