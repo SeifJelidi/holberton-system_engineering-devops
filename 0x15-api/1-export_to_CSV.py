@@ -30,7 +30,7 @@ if __name__ == "__main__":
     filename = "{}.csv".format(id)
     fieldnames = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
 
-    with open(filename, 'w', newline='') as csv_file:
+    with open(filename, 'w') as csv_file:
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames,
                                     quoting=csv.QUOTE_ALL)
         csv_writer.writerows(task_list)
