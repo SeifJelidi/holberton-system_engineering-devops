@@ -7,8 +7,7 @@ def recurse(subreddit, hot_list=[], after=None):
     '''queries the Reddit API and returns a list
     containing the titles of all hot articles for a given subreddit'''
 
-    url = 'https://www.reddit.com/r/{}/hot.json'\
-            .format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     if after:
         url = url + '?after={}'.format(after)
     user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64;\
