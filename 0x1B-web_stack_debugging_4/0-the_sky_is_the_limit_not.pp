@@ -1,10 +1,4 @@
 #fix in nginx
-exec { 'fixing':
-command => 'sed -i' "s/15/2000/" '/etc/default/nginx',
+command => 'sed -i "s/15/2000/" /etc/default/nginx;service nginx restart',
 path    => ['/bin/']
-}
-
-exec { 'restart_server':
-command  => 'service nginx restart',
-}
 
